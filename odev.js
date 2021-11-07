@@ -70,3 +70,21 @@ for (let i = 2; i < 1000; i++) {
         console.log(i)
     }
 }
+/***************10.000 ekadar olan arkadaş sayıları bulur******************************************/
+for (let i = 210; i < 10000; i++) {
+    let sayi1BolenToplam = 0;
+    let sayi2BolenToplam = 0;
+    for (let j = 1; j < i; j++) {
+        if (i%j == 0) {
+            sayi1BolenToplam = sayi1BolenToplam +j;
+        }
+    }
+    for (let j = 1; j < sayi1BolenToplam; j++) {
+        if (sayi1BolenToplam % j == 0) {
+            sayi2BolenToplam = sayi2BolenToplam + j;
+        }
+    }
+    if (sayi2BolenToplam == i && sayi1BolenToplam != i ) {
+        console.log(sayi1BolenToplam + "--"+i)
+    }
+}
